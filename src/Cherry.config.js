@@ -324,6 +324,9 @@ const defaultConfig = {
     { className: 'light', label: '明亮' },
     { className: 'green', label: '清新' },
     { className: 'red', label: '热情' },
+    { className: 'new_1', label: '自定义-1' },
+    { className: 'new_2', label: '自定义-2' },
+    { className: 'new_3', label: '自定义-3' },
   ],
   // 预览页面不需要绑定事件
   isPreviewOnly: false,
