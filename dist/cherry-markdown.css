@@ -3703,19 +3703,31 @@ div[data-type=codeBlock] .token.inserted {
   /** 二级菜单 */
   /** 选中文字时弹出的按钮 */
 }
-.cherry.theme__new_1 .cherry-toolbar, .cherry.theme__new_1 .cherry-floatmenu, .cherry.theme__new_1 .cherry-bubble, .cherry.theme__new_1 .cherry-sidebar {
+.cherry.theme__new_1 .cherry-toolbar,
+.cherry.theme__new_1 .cherry-floatmenu,
+.cherry.theme__new_1 .cherry-bubble,
+.cherry.theme__new_1 .cherry-sidebar {
   background: rgb(60, 60, 60);
   border-color: rgb(60, 60, 60);
 }
-.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button, .cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button, .cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button, .cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button {
+.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button,
+.cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button,
+.cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button,
+.cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button {
   color: #d7e6fe;
 }
-.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button:hover, .cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button:hover, .cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button:hover, .cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button:hover {
+.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button:hover,
+.cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button:hover,
+.cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button:hover,
+.cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button:hover {
   background-color: rgb(69, 70, 70);
   color: rgb(255, 255, 255) !important;
   border-color: rgb(60, 60, 60);
 }
-.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button:hover i, .cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button:hover i, .cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button:hover i, .cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button:hover i {
+.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button:hover i,
+.cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button:hover i,
+.cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button:hover i,
+.cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button:hover i {
   color: rgb(255, 255, 255) !important;
 }
 .cherry.theme__new_1 .cherry-dropdown {
@@ -3749,24 +3761,32 @@ div[data-type=codeBlock] .token.inserted {
   border-top-color: rgb(60, 60, 60);
 }
 .cherry.theme__new_1 .cherry-editor {
-  background-color: rgb(18, 18, 254);
+  background-color: rgb(247, 247, 247);
 }
 .cherry.theme__new_1 .cherry-editor .CodeMirror {
-  background-color: rgb(18, 18, 254);
+  background-color: rgb(247, 247, 247);
 }
 .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-cursor {
   border-left: 1px solid rgb(255, 255, 255);
 }
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll span, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-variable-2, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-string, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-strong, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-em, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-meta {
-  color: rgb(200, 200, 200);
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll span,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-variable-2,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-string,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-strong,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-em,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-meta {
+  color: rgb(0, 0, 0);
 }
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-image-marker, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-quote, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-header {
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-image-marker,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-quote,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-header {
   color: rgb(247, 133, 83);
 }
 .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-url {
   background-color: rgb(0, 0, 0);
 }
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-comment, .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-url {
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-comment,
+.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-url {
   color: rgb(255, 203, 107);
 }
 .cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-selected {
@@ -3776,20 +3796,21 @@ div[data-type=codeBlock] .token.inserted {
   box-shadow: 0 0 10px rgba(128, 145, 165, 0.2);
 }
 .cherry.theme__new_1 .cherry-previewer {
-  background-color: rgb(255, 20, 255);
+  background-color: rgb(255, 255, 255);
 }
 .cherry.theme__new_1 .cherry-previewer .cherry-mobile-previewer-content {
-  background-color: rgb(18, 18, 254);
+  background-color: rgb(247, 247, 247);
 }
 .cherry.theme__new_1 .cherry-previewer-table-content-hander .cherry-previewer-table-content-hander__input textarea {
-  background-color: rgb(18, 18, 254);
-  color: rgb(200, 200, 200);
+  background-color: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
   outline-color: rgb(247, 133, 83);
 }
 
 /** 预览区域样式 */
 .cherry-markdown.theme__new_1 {
-  color: rgb(200, 200, 200);
+  color: rgb(0, 0, 0);
+  counter-reset: write-1 write-2 write-3 write-4;
   /** 行内代码 */
   /** 
   * 代码块
@@ -3803,11 +3824,82 @@ div[data-type=codeBlock] .token.inserted {
   /** 段落公式 */
   /** 目录 */
 }
-.cherry-markdown.theme__new_1 h1, .cherry-markdown.theme__new_1 h2, .cherry-markdown.theme__new_1 h3, .cherry-markdown.theme__new_1 h4, .cherry-markdown.theme__new_1 h5 {
+.cherry-markdown.theme__new_1 p,
+.cherry-markdown.theme__new_1 div {
+  font-family: 宋体;
+  font-size: 12pt;
+  max-width: 21cm;
+  /*A4标准宽度*/
+  text-align: justify;
+}
+.cherry-markdown.theme__new_1 h1,
+.cherry-markdown.theme__new_1 h2,
+.cherry-markdown.theme__new_1 h3,
+.cherry-markdown.theme__new_1 h4,
+.cherry-markdown.theme__new_1 h5 {
   color: rgb(247, 133, 83);
 }
-.cherry-markdown.theme__new_1 h1, .cherry-markdown.theme__new_1 h2, .cherry-markdown.theme__new_1 h3, .cherry-markdown.theme__new_1 h4, .cherry-markdown.theme__new_1 h5, .cherry-markdown.theme__new_1 h6 {
+.cherry-markdown.theme__new_1 h1 {
+  text-align: center;
+  font-size: 18pt;
+}
+.cherry-markdown.theme__new_1 h2 {
+  font-family: 仿宋;
+  text-align: center;
+  font-size: 16pt;
+}
+.cherry-markdown.theme__new_1 h3 {
+  font-family: 黑体;
+  font-size: 14pt;
+}
+.cherry-markdown.theme__new_1 h4 {
+  text-align: center;
+  font-family: 楷体;
+  font-size: 14pt;
+}
+.cherry-markdown.theme__new_1 h1 {
+  counter-set: write-2;
+  counter-increment: write-1;
+}
+.cherry-markdown.theme__new_1 h1::before {
+  content: counter(write-1) ". ";
+}
+.cherry-markdown.theme__new_1 h2 {
+  counter-set: write-3;
+  counter-increment: write-2;
+}
+.cherry-markdown.theme__new_1 h2::before {
+  content: counter(write-1) "." counter(write-2) ". ";
+}
+.cherry-markdown.theme__new_1 h3 {
+  counter-set: write-4;
+  counter-increment: write-3;
+}
+.cherry-markdown.theme__new_1 h3::before {
+  content: counter(write-1) "." counter(write-2) "." counter(write-3) ". ";
+}
+.cherry-markdown.theme__new_1 h4 {
+  counter-increment: write-4;
+}
+.cherry-markdown.theme__new_1 h4::before {
+  content: counter(write-1) "." counter(write-2) "." counter(write-3) "." counter(write-4) ". ";
+}
+.cherry-markdown.theme__new_1 h1,
+.cherry-markdown.theme__new_1 h2,
+.cherry-markdown.theme__new_1 h3,
+.cherry-markdown.theme__new_1 h4,
+.cherry-markdown.theme__new_1 h5,
+.cherry-markdown.theme__new_1 h6 {
   /** 标题前面的锚点或序号 */
+  font-weight: bold;
+}
+.cherry-markdown.theme__new_1 h1 .anchor,
+.cherry-markdown.theme__new_1 h2 .anchor,
+.cherry-markdown.theme__new_1 h3 .anchor,
+.cherry-markdown.theme__new_1 h4 .anchor,
+.cherry-markdown.theme__new_1 h5 .anchor,
+.cherry-markdown.theme__new_1 h6 .anchor {
+  position: relative; /* 添加相对定位 */
 }
 .cherry-markdown.theme__new_1 ul {
   /** checklist 模式，未勾选时 */
@@ -3829,7 +3921,8 @@ div[data-type=codeBlock] .token.inserted {
   list-style: square;
 }
 .cherry-markdown.theme__new_1 blockquote {
-  color: rgb(200, 200, 200);
+  font-family: 楷体;
+  padding-left: 10px;
 }
 .cherry-markdown.theme__new_1 a {
   text-decoration: none;
@@ -3839,60 +3932,87 @@ div[data-type=codeBlock] .token.inserted {
   color: rgb(247, 133, 83);
 }
 .cherry-markdown.theme__new_1 hr {
-  border-color: rgb(105, 105, 105);
+  border-color: rgb(0, 0, 0);
 }
-.cherry-markdown.theme__new_1 p code, .cherry-markdown.theme__new_1 li code {
+.cherry-markdown.theme__new_1 p code,
+.cherry-markdown.theme__new_1 li code {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 203, 107);
-  border: 1px solid rgb(105, 105, 105);
+  border: 1px solid rgb(0, 0, 0);
 }
-.cherry-markdown.theme__new_1 table, .cherry-markdown.theme__new_1 .cherry-table {
-  color: rgb(200, 200, 200);
+.cherry-markdown.theme__new_1 table,
+.cherry-markdown.theme__new_1 .cherry-table {
+  color: rgb(0, 0, 0);
 }
-.cherry-markdown.theme__new_1 table th, .cherry-markdown.theme__new_1 .cherry-table th {
+.cherry-markdown.theme__new_1 table th,
+.cherry-markdown.theme__new_1 .cherry-table th {
   background-color: rgb(0, 0, 0);
 }
-.cherry-markdown.theme__new_1 table tr, .cherry-markdown.theme__new_1 table th, .cherry-markdown.theme__new_1 table td, .cherry-markdown.theme__new_1 .cherry-table tr, .cherry-markdown.theme__new_1 .cherry-table th, .cherry-markdown.theme__new_1 .cherry-table td {
-  border-color: rgb(105, 105, 105);
+.cherry-markdown.theme__new_1 table tr,
+.cherry-markdown.theme__new_1 table th,
+.cherry-markdown.theme__new_1 table td,
+.cherry-markdown.theme__new_1 .cherry-table tr,
+.cherry-markdown.theme__new_1 .cherry-table th,
+.cherry-markdown.theme__new_1 .cherry-table td {
+  border-color: rgb(0, 0, 0);
 }
 .cherry-markdown.theme__new_1 ruby {
   /** 上部的拼音 */
 }
 .cherry-markdown.theme__new_1 .footnote {
-  border-color: rgb(105, 105, 105);
+  border-color: rgb(0, 0, 0);
 }
 .cherry-markdown.theme__new_1 .footnote .footnote-title {
   background-color: rgb(0, 0, 0);
 }
 .cherry-markdown.theme__new_1 .footnote .one-footnote {
-  color: rgb(200, 200, 200);
-  border-color: rgb(105, 105, 105);
+  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
 }
 .cherry-markdown.theme__new_1 .footnote .one-footnote a.footnote-ref {
   padding: 5px;
 }
 .cherry-markdown.theme__new_1 .toc {
-  border: 1px solid rgb(105, 105, 105);
   margin-top: 15px;
   margin-bottom: 15px;
   margin-right: 15px;
+  counter-reset: toc-level-1 toc-level-2 toc-level-3 toc-level-4;
+  /*修复缺失上级标题时无法递增*/
 }
 .cherry-markdown.theme__new_1 .toc .toc-title {
-  padding: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgb(105, 105, 105);
+  font-family: 仿宋;
+  text-align: center;
+  font-size: 18pt;
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
 }
 .cherry-markdown.theme__new_1 .toc .toc-li {
   border: none;
   padding: 0 20px;
 }
+.cherry-markdown.theme__new_1 .toc .toc-li .level-1 {
+  font-family: 宋体;
+  font-weight: bold;
+}
+.cherry-markdown.theme__new_1 .toc .toc-li .level-2 {
+  font-family: 宋体;
+}
+.cherry-markdown.theme__new_1 .toc .toc-li .level-3 {
+  font-family: 宋体;
+}
+.cherry-markdown.theme__new_1 .toc .toc-li .level-4 {
+  font-family: 仿宋;
+}
 .cherry-markdown.theme__new_1 .toc .toc-li a {
-  color: rgb(200, 200, 200);
+  color: rgb(0, 0, 0);
 }
 .cherry-markdown.theme__new_1 .toc .toc-li a:hover {
   color: rgb(247, 133, 83);
 }
-.cherry-markdown.theme__new_1 figure svg path, .cherry-markdown.theme__new_1 figure svg rect, .cherry-markdown.theme__new_1 figure svg line {
+.cherry-markdown.theme__new_1 figure svg path,
+.cherry-markdown.theme__new_1 figure svg rect,
+.cherry-markdown.theme__new_1 figure svg line {
   stroke: rgb(255, 203, 107) !important;
 }
 .cherry-markdown.theme__new_1 figure svg text {
@@ -3907,6 +4027,39 @@ div[data-type=codeBlock] .token.inserted {
 }
 .cherry-markdown.theme__new_1 figure svg circle.state-start {
   fill: rgb(250, 160, 0) !important;
+}
+
+/** 目录序号 */
+.cherry-markdown.theme__new_1 .toc .toc-li .level-1 {
+  counter-set: toc-level-2;
+}
+
+.cherry-markdown.theme__new_1 .toc .toc-li .level-2 {
+  counter-set: toc-level-3;
+}
+
+.cherry-markdown.theme__new_1 .toc .toc-li .level-3 {
+  counter-set: toc-level-4;
+}
+
+.cherry-markdown.theme__new_1 .toc .toc-li .level-1:before {
+  counter-increment: toc-level-1;
+  content: counter(toc-level-1) " ";
+}
+
+.cherry-markdown.theme__new_1 .toc .toc-li .level-2:before {
+  counter-increment: toc-level-2;
+  content: counter(toc-level-1) "." counter(toc-level-2) " ";
+}
+
+.cherry-markdown.theme__new_1 .toc .toc-li .level-3:before {
+  counter-increment: toc-level-3;
+  content: counter(toc-level-1) "." counter(toc-level-2) "." counter(toc-level-3) " ";
+}
+
+.cherry-markdown.theme__new_1 .toc .toc-li .level-4:before {
+  counter-increment: toc-level-4;
+  content: counter(toc-level-1) "." counter(toc-level-2) "." counter(toc-level-3) "." counter(toc-level-4) " ";
 }
 
 /** 色值可以参考：https://yeun.github.io/open-color/ */
