@@ -1,90 +1,32 @@
 @import '../variable.scss';
 
-/** 色值可以参考：https://yeun.github.io/open-color/ */
 
-/** 工具栏样式 */
-$toolbarBg: rgb(60, 60, 60);
-$toolbarBtnColor: $toolbarBtnColorDark;
-$toolbarBtnBgHover: rgb(69, 70, 70);
-$toolbarBtnHoverColor: rgb(255, 255, 255);
-$toolbarColorItemHoverBorderColor: rgb(247, 133, 83);
-$sidebarShadow: $shadow;
-/** 编辑区域样式 */
-$editorBg: rgb(247, 247, 247);
-$editorColor: rgb(0, 0, 0);
-$editorSelectedBg: $toolbarBtnBgHover;
-$editorUrlBg: rgb(0, 0, 0);
-$editorCursorColor: rgb(255, 255, 255);
-$editorImportantColor: rgb(247, 133, 83);
-$editorCodeColor: rgb(255, 203, 107);
-/** 预览区域样式 */
-$previewBg: rgb(255, 255, 255);
-$previewMobileBgColor: $editorBg;
-/** markdown样式 */
-$mdColor: $editorColor;
-$mdHeaderColor: $editorImportantColor;
-$mdLineColor: rgb(0, 0, 0);
-$mdAColor: $editorCodeColor;
-$mdAHoverColor: $editorImportantColor;
-$mdInlineCodeColor: $editorCodeColor;
-$mdInlineCodeBg: $editorUrlBg;
-$mdSvgTextColor: rgb(250, 160, 0);
 
 /** 编辑器样式 */
 .cherry.theme__new_1 {
 
-  /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
-  .cherry-toolbar,
-  .cherry-floatmenu,
-  .cherry-bubble,
-  .cherry-sidebar {
-    background: $toolbarBg;
-    border-color: $toolbarBg;
-
-    .cherry-toolbar-button {
-      color: $toolbarBtnColor;
-
-      &:hover {
-        background-color: $toolbarBtnBgHover;
-        color: $toolbarBtnHoverColor !important;
-        border-color: $toolbarBg;
-
-        i {
-          color: $toolbarBtnHoverColor !important;
-        }
-      }
-    }
+  .cherry-toolbar {
+    
   }
 
   /** 二级菜单 */
   .cherry-dropdown {
-    background: $toolbarBg;
-
     .cherry-dropdown-item {
-      color: $toolbarBtnColor;
+      /** 图标 */
+      i {
 
-      &:hover {
-        background-color: $toolbarBtnBgHover;
-        color: $toolbarBtnHoverColor;
       }
     }
-
     /** 选择颜色的按钮 */
     &.cherry-color-wrap {
+      .cherry-color-text {
+        /** 色盘的标题 */
+        h3 {
 
-      /** 色盘的标题 */
-      h3 {
-        color: $toolbarBtnColor;
-      }
+        }
+        /** 色盘里的每一个色块 */
+        .cherry-color-item {
 
-      /** 色盘里的每一个色块 */
-      .cherry-color-item {
-        // width: 15px;
-        // border: none;
-        border-color: $toolbarBtnBgHover;
-
-        &:hover {
-          border-color: $toolbarColorItemHoverBorderColor;
         }
       }
     }
@@ -92,85 +34,38 @@ $mdSvgTextColor: rgb(250, 160, 0);
 
   /** 选中文字时弹出的按钮 */
   .cherry-bubble {
-    .cherry-bubble-bottom {
-      border-top-color: $toolbarBg;
-    }
 
     /** 粘贴HTML内容时弹出的选择按钮 */
-    &.cherry-switch-paste {}
+    &.cherry-switch-paste {
+  
+    }
+  }
+
+
+  /** 光标focus到空行时联想出的按钮 */
+  .cherry-floatmenu {
+
   }
 
   .cherry-editor {
-    background-color: $editorBg;
 
-    .CodeMirror {
-      background-color: $editorBg;
-
-      .CodeMirror-cursor {
-        border-left: 1px solid $editorCursorColor;
-      }
-
-      .CodeMirror-scroll {
-
-        span,
-        .cm-variable-2,
-        .cm-string,
-        .cm-strong,
-        .cm-em,
-        .cm-meta {
-          color: $editorColor;
-        }
-
-        .cm-image-marker,
-        .cm-quote,
-        .cm-header {
-          color: $editorImportantColor;
-        }
-
-        .cm-url {
-          background-color: $editorUrlBg;
-        }
-
-        .cm-comment,
-        .cm-url {
-          color: $editorCodeColor;
-        }
-      }
-
-      .CodeMirror-selected {
-        background-color: $editorSelectedBg;
-      }
-    }
   }
 
   .cherry-sidebar {
-    box-shadow: $sidebarShadow;
-  }
 
-  .cherry-previewer {
-    background-color: $previewBg;
-
-    .cherry-mobile-previewer-content {
-      background-color: $previewMobileBgColor;
-    }
-  }
-
-  .cherry-previewer-table-content-hander {
-    .cherry-previewer-table-content-hander__input {
-      textarea {
-        background-color: $editorBg;
-        color: $editorColor;
-        outline-color: $editorImportantColor;
-      }
-    }
   }
 
 }
 
 /** 预览区域样式 */
 .cherry-markdown.theme__new_1 {
-  color: $mdColor;
   counter-reset: write-1 write-2 write-3 write-4;
+  font-family:宋体;
+  font-size:12pt;
+  max-width: 21cm; /*A4标准宽度*/
+  // border:1px solid #CCC ; /* 添加一个淡灰色的边框 */ /* 在我研究出来怎么自动适配大小前，这玩意没法用 */
+  text-align: justify;
+
 
   p,
   div {
@@ -178,15 +73,7 @@ $mdSvgTextColor: rgb(250, 160, 0);
     font-size: 12pt;
     max-width: 21cm;
     /*A4标准宽度*/
-    text-align: justify;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: $mdHeaderColor;
+    text-indent: 50px;
   }
 
   h1 {
@@ -211,33 +98,34 @@ $mdSvgTextColor: rgb(250, 160, 0);
     font-size: 14pt;
   }
 
-  h5 {}
-
   h1 {
     counter-set: write-2;
     counter-increment: write-1;
     &::before {
-      content:counter(write-1)". ";
+      //content:counter(write-1)". ";
     }
   }
   h2{
     counter-set: write-3;
     counter-increment: write-2;
     &::before {
-      content:counter(write-1)"."counter(write-2)". ";
+      //content:counter(write-1)"."counter(write-2)". ";
+      content:counter(write-2)". ";
     }
   }
   h3{
     counter-set: write-4;
     counter-increment: write-3;
     &::before {
-      content:counter(write-1)"."counter(write-2)"."counter(write-3)". ";
+      //content:counter(write-1)"."counter(write-2)"."counter(write-3)". ";
+      content:counter(write-2)"."counter(write-3)". ";
     }
   }
   h4{
     counter-increment: write-4;
     &::before {
-      content:counter(write-1)"."counter(write-2)"."counter(write-3)"."counter(write-4)". ";
+      //content:counter(write-1)"."counter(write-2)"."counter(write-3)"."counter(write-4)". ";
+      content:counter(write-2)"."counter(write-3)"."counter(write-4)". ";
     }
   }
 
@@ -250,11 +138,12 @@ $mdSvgTextColor: rgb(250, 160, 0);
     /** 标题前面的锚点或序号 */
     font-weight: bold;
 
-    /** 在我研究出来怎么把anchor放在::before的前面之前，暂时不用这个破玩意了
+    /** 在我研究出来怎么把anchor放在::before的前面之前，暂时不用这个破玩意了 */
     .anchor {
+      display: none;
       position: relative;
     }
-    */
+    
   }
 
   ul {
@@ -300,10 +189,8 @@ $mdSvgTextColor: rgb(250, 160, 0);
 
   a {
     text-decoration: none;
-    color: $mdAColor;
 
     &:hover {
-      color: $mdAHoverColor;
     }
   }
 
@@ -317,9 +204,7 @@ $mdSvgTextColor: rgb(250, 160, 0);
 
   sub {}
 
-  hr {
-    border-color: $mdLineColor;
-  }
+  hr {}
 
   img {}
 
@@ -329,32 +214,49 @@ $mdSvgTextColor: rgb(250, 160, 0);
 
   /** 行内代码 */
   p code,
-  li code {
-    background-color: $mdInlineCodeBg;
-    color: $mdInlineCodeColor;
-    border: 1px solid $mdLineColor;
+  p code span,
+  li code,
+  li code span{
+    color: rgb(0, 0, 0);
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   }
 
   /** 
   * 代码块
   */
-  pre code {}
+  pre code,
+  pre code span {
+    //color: rgb(0, 0, 0);
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  }
 
   /** 
   * 表格
   */
   table,
   .cherry-table {
-    color: $mdColor;
+    // color: $mdColor;
+    border-top: 1.5pt solid;
+	  border-bottom: 1.5pt solid;
+	  font-family:宋体;
+	  font-size:10.5pt;
+	  text-align:center;
+    page-break-inside:avoid!important;
 
-    th {
-      background-color: $mdInlineCodeBg;
+    thead {
+      border-bottom: 1pt solid;
+	    font-family:黑体;
+	    font-size:10.5pt;
     }
 
-    tr,
-    th,
+    th{
+      border: none;
+      background-color:white;
+    }
+
     td {
-      border-color: $mdLineColor;
+      border: none;
+      padding:2px;
     }
   }
 
@@ -367,18 +269,24 @@ $mdSvgTextColor: rgb(250, 160, 0);
 
   /** 脚注 */
   .footnote {
-    border-color: $mdLineColor;
-
+    background-color: transparent;
+    font-family:宋体;
+    font-size:10.5pt !important;
+    color: black;     
+    margin-top: 0;
     .footnote-title {
-      background-color: $mdInlineCodeBg;
+      display:none;
     }
 
     .one-footnote {
-      color: $mdColor;
-      border-color: $mdLineColor;
+      background-color:transparent;
 
       a.footnote-ref {
-        padding: 5px;
+        padding: 1px;
+        /* 至今未解决为什么一遇到链接，半路上就会被折叠。。。
+        text-overflow: unset;
+        white-space: normal;
+        */
       }
     }
   }
@@ -433,10 +341,9 @@ $mdSvgTextColor: rgb(250, 160, 0);
       }
 
       a {
-        color: $mdColor;
 
         &:hover {
-          color: $mdAHoverColor;
+
         }
       }
     }
@@ -451,23 +358,23 @@ $mdSvgTextColor: rgb(250, 160, 0);
       path,
       rect,
       line {
-        stroke: $mdAColor !important;
+
       }
 
       text {
-        fill: $mdSvgTextColor !important;
+
         stroke: none !important;
       }
 
       tspan {
-        fill: $mdSvgTextColor !important;
+
       }
 
       circle {
         fill: rgb(236, 236, 255) !important;
 
         &.state-start {
-          fill: $mdSvgTextColor !important;
+
         }
       }
     }
@@ -498,23 +405,39 @@ $mdSvgTextColor: rgb(250, 160, 0);
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-1:before {
   counter-increment: toc-level-1;
-  content: counter(toc-level-1)"\00A0";
+  //content: counter(toc-level-1)"\00A0";
 }
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-2:before {
   counter-increment: toc-level-2;
-  // content: counter(toc-level-2, cjk-ideographic) "、 ";
-  content: counter(toc-level-1)"."counter(toc-level-2)"\00A0";
+  content: counter(toc-level-2)"\00A0";
+  //content: counter(toc-level-1)"."counter(toc-level-2)"\00A0";
 }
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-3:before {
   counter-increment: toc-level-3;
-  // content: "(" counter(toc-level-3, cjk-ideographic)")";
-  content: counter(toc-level-1)"."counter(toc-level-2)"."counter(toc-level-3)"\00A0";
+  content: counter(toc-level-2)"."counter(toc-level-3)"\00A0";
+  //content: counter(toc-level-1)"."counter(toc-level-2)"."counter(toc-level-3)"\00A0";
 }
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-4:before {
   counter-increment: toc-level-4;
-  // content: counter(toc-level-4, decimal) ". ";
-  content: counter(toc-level-1)"."counter(toc-level-2)"."counter(toc-level-3)"."counter(toc-level-4)" ";
+  content: counter(toc-level-2)"."counter(toc-level-3)"."counter(toc-level-4)"\00A0";
+  //content: counter(toc-level-1)"."counter(toc-level-2)"."counter(toc-level-3)"."counter(toc-level-4)" ";
 }
+
+.cherry-table-container {
+  display: flex;
+  justify-content: center;
+}
+.cherry-table-container table {
+  width: 100%;
+  max-width: 800px; /* 可根据需要调整 */
+}
+
+[class*=language-] {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 10pt;
+  padding: 5pt;
+}
+

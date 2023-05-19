@@ -3692,125 +3692,32 @@ div[data-type=codeBlock] .token.inserted {
   color: #d6336c;
 }
 
-/** 色值可以参考：https://yeun.github.io/open-color/ */
-/** 工具栏样式 */
-/** 编辑区域样式 */
-/** 预览区域样式 */
-/** markdown样式 */
 /** 编辑器样式 */
 .cherry.theme__new_1 {
-  /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
   /** 二级菜单 */
   /** 选中文字时弹出的按钮 */
-}
-.cherry.theme__new_1 .cherry-toolbar,
-.cherry.theme__new_1 .cherry-floatmenu,
-.cherry.theme__new_1 .cherry-bubble,
-.cherry.theme__new_1 .cherry-sidebar {
-  background: rgb(60, 60, 60);
-  border-color: rgb(60, 60, 60);
-}
-.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button,
-.cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button,
-.cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button,
-.cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button {
-  color: #d7e6fe;
-}
-.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button:hover,
-.cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button:hover,
-.cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button:hover,
-.cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button:hover {
-  background-color: rgb(69, 70, 70);
-  color: rgb(255, 255, 255) !important;
-  border-color: rgb(60, 60, 60);
-}
-.cherry.theme__new_1 .cherry-toolbar .cherry-toolbar-button:hover i,
-.cherry.theme__new_1 .cherry-floatmenu .cherry-toolbar-button:hover i,
-.cherry.theme__new_1 .cherry-bubble .cherry-toolbar-button:hover i,
-.cherry.theme__new_1 .cherry-sidebar .cherry-toolbar-button:hover i {
-  color: rgb(255, 255, 255) !important;
+  /** 光标focus到空行时联想出的按钮 */
 }
 .cherry.theme__new_1 .cherry-dropdown {
-  background: rgb(60, 60, 60);
   /** 选择颜色的按钮 */
 }
 .cherry.theme__new_1 .cherry-dropdown .cherry-dropdown-item {
-  color: #d7e6fe;
+  /** 图标 */
 }
-.cherry.theme__new_1 .cherry-dropdown .cherry-dropdown-item:hover {
-  background-color: rgb(69, 70, 70);
-  color: rgb(255, 255, 255);
-}
-.cherry.theme__new_1 .cherry-dropdown.cherry-color-wrap {
+.cherry.theme__new_1 .cherry-dropdown.cherry-color-wrap .cherry-color-text {
   /** 色盘的标题 */
   /** 色盘里的每一个色块 */
-}
-.cherry.theme__new_1 .cherry-dropdown.cherry-color-wrap h3 {
-  color: #d7e6fe;
-}
-.cherry.theme__new_1 .cherry-dropdown.cherry-color-wrap .cherry-color-item {
-  border-color: rgb(69, 70, 70);
-}
-.cherry.theme__new_1 .cherry-dropdown.cherry-color-wrap .cherry-color-item:hover {
-  border-color: rgb(247, 133, 83);
 }
 .cherry.theme__new_1 .cherry-bubble {
   /** 粘贴HTML内容时弹出的选择按钮 */
 }
-.cherry.theme__new_1 .cherry-bubble .cherry-bubble-bottom {
-  border-top-color: rgb(60, 60, 60);
-}
-.cherry.theme__new_1 .cherry-editor {
-  background-color: rgb(247, 247, 247);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror {
-  background-color: rgb(247, 247, 247);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-cursor {
-  border-left: 1px solid rgb(255, 255, 255);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll span,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-variable-2,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-string,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-strong,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-em,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-meta {
-  color: rgb(0, 0, 0);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-image-marker,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-quote,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-header {
-  color: rgb(247, 133, 83);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-url {
-  background-color: rgb(0, 0, 0);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-comment,
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-scroll .cm-url {
-  color: rgb(255, 203, 107);
-}
-.cherry.theme__new_1 .cherry-editor .CodeMirror .CodeMirror-selected {
-  background-color: rgb(69, 70, 70);
-}
-.cherry.theme__new_1 .cherry-sidebar {
-  box-shadow: 0 0 10px rgba(128, 145, 165, 0.2);
-}
-.cherry.theme__new_1 .cherry-previewer {
-  background-color: rgb(255, 255, 255);
-}
-.cherry.theme__new_1 .cherry-previewer .cherry-mobile-previewer-content {
-  background-color: rgb(247, 247, 247);
-}
-.cherry.theme__new_1 .cherry-previewer-table-content-hander .cherry-previewer-table-content-hander__input textarea {
-  background-color: rgb(247, 247, 247);
-  color: rgb(0, 0, 0);
-  outline-color: rgb(247, 133, 83);
-}
-
 /** 预览区域样式 */
 .cherry-markdown.theme__new_1 {
-  color: rgb(0, 0, 0);
   counter-reset: write-1 write-2 write-3 write-4;
+  font-family: 宋体;
+  font-size: 12pt;
+  max-width: 21cm; /*A4标准宽度*/
+  text-align: justify;
   /** 行内代码 */
   /** 
   * 代码块
@@ -3830,14 +3737,7 @@ div[data-type=codeBlock] .token.inserted {
   font-size: 12pt;
   max-width: 21cm;
   /*A4标准宽度*/
-  text-align: justify;
-}
-.cherry-markdown.theme__new_1 h1,
-.cherry-markdown.theme__new_1 h2,
-.cherry-markdown.theme__new_1 h3,
-.cherry-markdown.theme__new_1 h4,
-.cherry-markdown.theme__new_1 h5 {
-  color: rgb(247, 133, 83);
+  text-indent: 50px;
 }
 .cherry-markdown.theme__new_1 h1 {
   text-align: center;
@@ -3861,28 +3761,25 @@ div[data-type=codeBlock] .token.inserted {
   counter-set: write-2;
   counter-increment: write-1;
 }
-.cherry-markdown.theme__new_1 h1::before {
-  content: counter(write-1) ". ";
-}
 .cherry-markdown.theme__new_1 h2 {
   counter-set: write-3;
   counter-increment: write-2;
 }
 .cherry-markdown.theme__new_1 h2::before {
-  content: counter(write-1) "." counter(write-2) ". ";
+  content: counter(write-2) ". ";
 }
 .cherry-markdown.theme__new_1 h3 {
   counter-set: write-4;
   counter-increment: write-3;
 }
 .cherry-markdown.theme__new_1 h3::before {
-  content: counter(write-1) "." counter(write-2) "." counter(write-3) ". ";
+  content: counter(write-2) "." counter(write-3) ". ";
 }
 .cherry-markdown.theme__new_1 h4 {
   counter-increment: write-4;
 }
 .cherry-markdown.theme__new_1 h4::before {
-  content: counter(write-1) "." counter(write-2) "." counter(write-3) "." counter(write-4) ". ";
+  content: counter(write-2) "." counter(write-3) "." counter(write-4) ". ";
 }
 .cherry-markdown.theme__new_1 h1,
 .cherry-markdown.theme__new_1 h2,
@@ -3892,6 +3789,7 @@ div[data-type=codeBlock] .token.inserted {
 .cherry-markdown.theme__new_1 h6 {
   /** 标题前面的锚点或序号 */
   font-weight: bold;
+  /** 在我研究出来怎么把anchor放在::before的前面之前，暂时不用这个破玩意了 */
 }
 .cherry-markdown.theme__new_1 h1 .anchor,
 .cherry-markdown.theme__new_1 h2 .anchor,
@@ -3899,7 +3797,8 @@ div[data-type=codeBlock] .token.inserted {
 .cherry-markdown.theme__new_1 h4 .anchor,
 .cherry-markdown.theme__new_1 h5 .anchor,
 .cherry-markdown.theme__new_1 h6 .anchor {
-  position: relative; /* 添加相对定位 */
+  display: none;
+  position: relative;
 }
 .cherry-markdown.theme__new_1 ul {
   /** checklist 模式，未勾选时 */
@@ -3926,51 +3825,65 @@ div[data-type=codeBlock] .token.inserted {
 }
 .cherry-markdown.theme__new_1 a {
   text-decoration: none;
-  color: rgb(255, 203, 107);
-}
-.cherry-markdown.theme__new_1 a:hover {
-  color: rgb(247, 133, 83);
-}
-.cherry-markdown.theme__new_1 hr {
-  border-color: rgb(0, 0, 0);
 }
 .cherry-markdown.theme__new_1 p code,
-.cherry-markdown.theme__new_1 li code {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 203, 107);
-  border: 1px solid rgb(0, 0, 0);
+.cherry-markdown.theme__new_1 p code span,
+.cherry-markdown.theme__new_1 li code,
+.cherry-markdown.theme__new_1 li code span {
+  color: rgb(0, 0, 0);
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+.cherry-markdown.theme__new_1 pre code,
+.cherry-markdown.theme__new_1 pre code span {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 .cherry-markdown.theme__new_1 table,
 .cherry-markdown.theme__new_1 .cherry-table {
-  color: rgb(0, 0, 0);
+  border-top: 1.5pt solid;
+  border-bottom: 1.5pt solid;
+  font-family: 宋体;
+  font-size: 10.5pt;
+  text-align: center;
+  page-break-inside: avoid !important;
+}
+.cherry-markdown.theme__new_1 table thead,
+.cherry-markdown.theme__new_1 .cherry-table thead {
+  border-bottom: 1pt solid;
+  font-family: 黑体;
+  font-size: 10.5pt;
 }
 .cherry-markdown.theme__new_1 table th,
 .cherry-markdown.theme__new_1 .cherry-table th {
-  background-color: rgb(0, 0, 0);
+  border: none;
+  background-color: white;
 }
-.cherry-markdown.theme__new_1 table tr,
-.cherry-markdown.theme__new_1 table th,
 .cherry-markdown.theme__new_1 table td,
-.cherry-markdown.theme__new_1 .cherry-table tr,
-.cherry-markdown.theme__new_1 .cherry-table th,
 .cherry-markdown.theme__new_1 .cherry-table td {
-  border-color: rgb(0, 0, 0);
+  border: none;
+  padding: 2px;
 }
 .cherry-markdown.theme__new_1 ruby {
   /** 上部的拼音 */
 }
 .cherry-markdown.theme__new_1 .footnote {
-  border-color: rgb(0, 0, 0);
+  background-color: transparent;
+  font-family: 宋体;
+  font-size: 10.5pt !important;
+  color: black;
+  margin-top: 0;
 }
 .cherry-markdown.theme__new_1 .footnote .footnote-title {
-  background-color: rgb(0, 0, 0);
+  display: none;
 }
 .cherry-markdown.theme__new_1 .footnote .one-footnote {
-  color: rgb(0, 0, 0);
-  border-color: rgb(0, 0, 0);
+  background-color: transparent;
 }
 .cherry-markdown.theme__new_1 .footnote .one-footnote a.footnote-ref {
-  padding: 5px;
+  padding: 1px;
+  /* 至今未解决为什么一遇到链接，半路上就会被折叠。。。
+  text-overflow: unset;
+  white-space: normal;
+  */
 }
 .cherry-markdown.theme__new_1 .toc {
   margin-top: 15px;
@@ -4004,31 +3917,12 @@ div[data-type=codeBlock] .token.inserted {
 .cherry-markdown.theme__new_1 .toc .toc-li .level-4 {
   font-family: 仿宋;
 }
-.cherry-markdown.theme__new_1 .toc .toc-li a {
-  color: rgb(0, 0, 0);
-}
-.cherry-markdown.theme__new_1 .toc .toc-li a:hover {
-  color: rgb(247, 133, 83);
-}
-.cherry-markdown.theme__new_1 figure svg path,
-.cherry-markdown.theme__new_1 figure svg rect,
-.cherry-markdown.theme__new_1 figure svg line {
-  stroke: rgb(255, 203, 107) !important;
-}
 .cherry-markdown.theme__new_1 figure svg text {
-  fill: rgb(250, 160, 0) !important;
   stroke: none !important;
-}
-.cherry-markdown.theme__new_1 figure svg tspan {
-  fill: rgb(250, 160, 0) !important;
 }
 .cherry-markdown.theme__new_1 figure svg circle {
   fill: rgb(236, 236, 255) !important;
 }
-.cherry-markdown.theme__new_1 figure svg circle.state-start {
-  fill: rgb(250, 160, 0) !important;
-}
-
 /** 目录序号 */
 .cherry-markdown.theme__new_1 .toc .toc-li .level-1 {
   counter-set: toc-level-2;
@@ -4044,22 +3938,37 @@ div[data-type=codeBlock] .token.inserted {
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-1:before {
   counter-increment: toc-level-1;
-  content: counter(toc-level-1) " ";
 }
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-2:before {
   counter-increment: toc-level-2;
-  content: counter(toc-level-1) "." counter(toc-level-2) " ";
+  content: counter(toc-level-2) " ";
 }
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-3:before {
   counter-increment: toc-level-3;
-  content: counter(toc-level-1) "." counter(toc-level-2) "." counter(toc-level-3) " ";
+  content: counter(toc-level-2) "." counter(toc-level-3) " ";
 }
 
 .cherry-markdown.theme__new_1 .toc .toc-li .level-4:before {
   counter-increment: toc-level-4;
-  content: counter(toc-level-1) "." counter(toc-level-2) "." counter(toc-level-3) "." counter(toc-level-4) " ";
+  content: counter(toc-level-2) "." counter(toc-level-3) "." counter(toc-level-4) " ";
+}
+
+.cherry-table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cherry-table-container table {
+  width: 100%;
+  max-width: 800px; /* 可根据需要调整 */
+}
+
+[class*=language-] {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 10pt;
+  padding: 5pt;
 }
 
 /** 色值可以参考：https://yeun.github.io/open-color/ */
