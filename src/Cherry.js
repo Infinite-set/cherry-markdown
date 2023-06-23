@@ -137,6 +137,11 @@ export default class Cherry extends CherryStatic {
 
     const wrapperFragment = document.createDocumentFragment();
     wrapperFragment.appendChild(this.toolbar.options.dom);
+    /* modified
+    const topHook = document.createElement('div');
+    topHook.id = 'cherryTopHook';
+    wrapperFragment.appendChild(topHook);
+    */
     wrapperFragment.appendChild(editor.options.editorDom);
     // 创建预览区域的侧边工具栏
     this.createSidebar(wrapperFragment);
