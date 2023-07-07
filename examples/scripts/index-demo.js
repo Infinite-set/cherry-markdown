@@ -82,18 +82,14 @@ var customMenuC = Cherry.createMenuHook('帮助中心',  {
   ]
 });
 /**
- * 定义一个空壳，用于自行规划cherry已有工具栏的层级结构
- */
-var customMenuD = Cherry.createMenuHook('自定义主题',  {
-  iconName: '',
-});
-/**
  * 自定义一个自定义菜单
  * 点第一次时，把选中的文字变成同时加粗和斜体
  * 保持光标选区不变，点第二次时，把加粗斜体的文字变成普通文本
  */
-var customMenuE = Cherry.createMenuHook('回到编辑位置',  {
+var customMenuD = Cherry.createMenuHook('回到编辑处',  {
+  iconName: 'edit',
   onClick: function() {
+    console.log(Cherry);
     window.scrollTo({
       top: 0,
       // left: 0,
@@ -102,76 +98,12 @@ var customMenuE = Cherry.createMenuHook('回到编辑位置',  {
   }
 });
 
-var customMenuF = Cherry.createMenuHook('回到顶部',  {
+var customMenuE = Cherry.createMenuHook('回到顶部',  {
+  iconName: 'header',
   onClick: function() {
-    // var targetElements = document.getElementById('cherryTopHook');
-    // console.log(targetElements);
-    // targetElements.scrollIntoView({ behavior: 'smooth' });
-    // const targetLine = codemirror.lineAtHeight(currentTop, 'local');
-    // var scrollPosition = window.scrollY;
-    // console.log('不知道这个是什么', targetLine);
-  }
-});
-
-var customMenuG = Cherry.createMenuHook('保存到2',  {
-  onClick: function(selection) {
-    // 获取用户选中的文字，调用getSelection方法后，如果用户没有选中任何文字，会尝试获取光标所在位置的单词或句子
-    let $selection = this.getSelection(selection) || '这里的文字有啥用？';
-    // 如果是单选，并且选中内容的开始结束内没有加粗语法，则扩大选中范围
-    if (!this.isSelections && !/^\s*(\*\*\*)[\s\S]+(\1)/.test($selection)) {
-      this.getMoreSelection('***', '***', () => {
-        const newSelection = this.editor.editor.getSelection();
-        const isBoldItalic = /^\s*(\*\*\*)[\s\S]+(\1)/.test(newSelection);
-        if (isBoldItalic) {
-          $selection = newSelection;
-        }
-        return isBoldItalic;
-      });
-    }
-    // 如果选中的文本中已经有加粗语法了，则去掉加粗语法
-    if (/^\s*(\*\*\*)[\s\S]+(\1)/.test($selection)) {
-      return $selection.replace(/(^)(\s*)(\*\*\*)([^\n]+)(\3)(\s*)($)/gm, '$1$4$7');
-    }
-    /**
-     * 注册缩小选区的规则
-     *    注册后，插入“***TEXT***”，选中状态会变成“***【TEXT】***”
-     *    如果不注册，插入后效果为：“【***TEXT***】”
-     */
-    this.registerAfterClickCb(() => {
-      this.setLessSelection('***', '***');
-    });
-    return $selection.replace(/(^)([^\n]+)($)/gm, '$1***$2***$3');
-  }
-});
-
-var customMenuH = Cherry.createMenuHook('保存到3',  {
-  onClick: function(selection) {
-    // 获取用户选中的文字，调用getSelection方法后，如果用户没有选中任何文字，会尝试获取光标所在位置的单词或句子
-    let $selection = this.getSelection(selection) || '这里的文字有啥用？';
-    // 如果是单选，并且选中内容的开始结束内没有加粗语法，则扩大选中范围
-    if (!this.isSelections && !/^\s*(\*\*\*)[\s\S]+(\1)/.test($selection)) {
-      this.getMoreSelection('***', '***', () => {
-        const newSelection = this.editor.editor.getSelection();
-        const isBoldItalic = /^\s*(\*\*\*)[\s\S]+(\1)/.test(newSelection);
-        if (isBoldItalic) {
-          $selection = newSelection;
-        }
-        return isBoldItalic;
-      });
-    }
-    // 如果选中的文本中已经有加粗语法了，则去掉加粗语法
-    if (/^\s*(\*\*\*)[\s\S]+(\1)/.test($selection)) {
-      return $selection.replace(/(^)(\s*)(\*\*\*)([^\n]+)(\3)(\s*)($)/gm, '$1$4$7');
-    }
-    /**
-     * 注册缩小选区的规则
-     *    注册后，插入“***TEXT***”，选中状态会变成“***【TEXT】***”
-     *    如果不注册，插入后效果为：“【***TEXT***】”
-     */
-    this.registerAfterClickCb(() => {
-      this.setLessSelection('***', '***');
-    });
-    return $selection.replace(/(^)([^\n]+)($)/gm, '$1***$2***$3');
+    this.editor.scrollToLineNum(0, 0, 1);
+    this.editor.previewer.scrollToLineNum(0);
+    this.editor.refresh();
   }
 });
 
@@ -264,10 +196,7 @@ var basicConfig = {
       'codeTheme',
       'export',
       {
-        customMenuBName: ['ruby', 'audio', 'video', 'customMenuAName'],
-      },
-      {
-        customMenuDName: ['customMenuEName', 'customMenuFName', 'customMenuGName', 'customMenuHName'],
+        customMenuBName: ['ruby', 'audio', 'video', 'customMenuAName', 'customMenuDName', 'customMenuEName'],
       },
       'customMenuCName',
       'theme',
@@ -281,9 +210,6 @@ var basicConfig = {
       customMenuCName: customMenuC,
       customMenuDName: customMenuD,
       customMenuEName: customMenuE,
-      customMenuFName: customMenuF,
-      customMenuGName: customMenuG,
-      customMenuHName: customMenuH,
     },
   },
   drawioIframeUrl: './drawio_demo.html',

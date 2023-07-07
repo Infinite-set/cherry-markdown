@@ -1,32 +1,90 @@
 @import '../variable.scss';
 
+$WHITE: #ffffff;
+$GRAY0: #ebebeb;
+$GRAY1: #e6e6e6;
+$GRAY2: #afafaf;
+$GRAY3: #8b8b8b;
+$GRAY4: #707070;
+$GRAY5: #534f51;
+$GRAY6: #3b3638;
+$GRAY7: #2e292b;
+$GRAY8: #212121;
+$GRAY9: #000000;
 
+/** 工具栏样式 */
+$toolbarBg: $GRAY0;
+$toolbarBtnColor: $GRAY8;
+$toolbarBtnBgHover: $GRAY5;
+$toolbarBtnHoverColor: $GRAY0;
+$toolbarColorItemHoverBorderColor: $GRAY9;
+$sidebarShadow: 0 0 10px $GRAY2;
+/** 编辑区域样式 */
+$editorBg: $WHITE;
+/** 预览区域样式 */
+$previewBg: $WHITE;
+$previewMobileBgColor: $editorBg;
+/** markdown样式 */
+$mdColor: $editorColor;
+$mdHeaderColor: $editorImportantColor;
+$mdLineColor: $GRAY8;
+$mdAColor: $editorCodeColor;
+$mdAHoverColor: $editorImportantColor;
+$mdInlineCodeColor: $editorCodeColor;
+$mdInlineCodeBg: $GRAY1;
+$mdBlockquoteBg: $GRAY1;
 
 /** 编辑器样式 */
-.cherry.theme__new_1 {
-
-  .cherry-toolbar {
-    
+.cherry.theme__essay {
+  
+  /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
+  .cherry-toolbar, .cherry-floatmenu, .cherry-bubble, .cherry-sidebar {
+    background: $toolbarBg;
+    border-color: $toolbarBg;
+    .cherry-toolbar-button {
+      color: $toolbarBtnColor;
+      i {
+        color: $toolbarBtnColor;
+      }
+      &:hover {
+        background-color: $toolbarBtnBgHover;
+        color: $toolbarBtnHoverColor !important;
+        border-color: $toolbarBg;
+        i {
+          color: $toolbarBtnHoverColor !important;
+        }
+      }
+    }
   }
-
+  .cherry-toolbar{
+    border: {
+      bottom: 2px solid $GRAY2;
+    }
+  }
+  
   /** 二级菜单 */
   .cherry-dropdown {
+    background: $toolbarBg;
     .cherry-dropdown-item {
-      /** 图标 */
-      i {
-
+      color: $toolbarBtnColor;
+      &:hover {
+        background-color: $toolbarBtnBgHover;
+        color: $toolbarBtnHoverColor;
       }
     }
     /** 选择颜色的按钮 */
     &.cherry-color-wrap {
-      .cherry-color-text {
-        /** 色盘的标题 */
-        h3 {
-
-        }
-        /** 色盘里的每一个色块 */
-        .cherry-color-item {
-
+      /** 色盘的标题 */
+      h3 {
+        color: $toolbarBtnColor;
+      }
+      /** 色盘里的每一个色块 */
+      .cherry-color-item {
+        // width: 15px;
+        // border: none;
+        border-color: $toolbarBtnBgHover;
+        &:hover {
+          border-color: $toolbarColorItemHoverBorderColor;
         }
       }
     }
@@ -34,36 +92,54 @@
 
   /** 选中文字时弹出的按钮 */
   .cherry-bubble {
-
+    .cherry-bubble-bottom {
+      border-top-color: $toolbarBg;
+    }
     /** 粘贴HTML内容时弹出的选择按钮 */
     &.cherry-switch-paste {
-  
+      
     }
   }
 
-
-  /** 光标focus到空行时联想出的按钮 */
-  .cherry-floatmenu {
-
-  }
-
   .cherry-editor {
-
+    background-color: $editorBg;
+    .CodeMirror {
+      background-color: $editorBg;
+    }
+    border: {
+      right: 2px solid $GRAY2;
+    }
   }
 
   .cherry-sidebar {
+    box-shadow: $sidebarShadow;
+  }
 
+  .cherry-previewer {
+    background-color: $previewBg;
+    .cherry-mobile-previewer-content {
+      background-color: $previewMobileBgColor;
+    }
+  }
+
+  .cherry-previewer-table-content-hander {
+    .cherry-previewer-table-content-hander__input {
+      textarea {
+        background-color: $editorBg;
+        color: $editorColor;
+        outline-color: $editorImportantColor;
+      }
+    }
   }
 
 }
 
 /** 预览区域样式 */
-.cherry-markdown.theme__new_1 {
+.cherry-markdown.theme__essay {
   counter-reset: write-1 write-2 write-3 write-4;
   font-family:宋体;
   font-size:12pt;
   max-width: 21cm; /*A4标准宽度*/
-  // border:1px solid #CCC ; /* 添加一个淡灰色的边框 */ /* 在我研究出来怎么自动适配大小前，这玩意没法用 */
   text-align: justify;
 
 
@@ -138,10 +214,8 @@
     /** 标题前面的锚点或序号 */
     font-weight: bold;
 
-    /** 在我研究出来怎么把anchor放在::before的前面之前，暂时不用这个破玩意了 */
     .anchor {
       display: none;
-      position: relative;
     }
     
   }
@@ -283,10 +357,6 @@
 
       a.footnote-ref {
         padding: 1px;
-        /* 至今未解决为什么一遇到链接，半路上就会被折叠。。。
-        text-overflow: unset;
-        white-space: normal;
-        */
       }
     }
   }
@@ -324,6 +394,7 @@
       padding: 0 20px;
 
       .level-1 {
+        display: none;
         font-family: 宋体;
         font-weight: bold;
       }
@@ -383,44 +454,44 @@
 }
 
 /** 目录序号 */
-.cherry-markdown.theme__new_1 .toc .toc-li .level-1 {
+.cherry-markdown.theme__essay .toc .toc-li .level-1 {
   counter-set: toc-level-2; // 这里要重置下一级标题的序号！
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-2 {
+.cherry-markdown.theme__essay .toc .toc-li .level-2 {
   counter-set: toc-level-3;
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-3 {
+.cherry-markdown.theme__essay .toc .toc-li .level-3 {
   counter-set: toc-level-4;
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-4 {
+.cherry-markdown.theme__essay .toc .toc-li .level-4 {
   //display: none;
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-5 {
+.cherry-markdown.theme__essay .toc .toc-li .level-5 {
   //display: none;
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-1:before {
+.cherry-markdown.theme__essay .toc .toc-li .level-1:before {
   counter-increment: toc-level-1;
   //content: counter(toc-level-1)"\00A0";
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-2:before {
+.cherry-markdown.theme__essay .toc .toc-li .level-2:before {
   counter-increment: toc-level-2;
   content: counter(toc-level-2)"\00A0";
   //content: counter(toc-level-1)"."counter(toc-level-2)"\00A0";
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-3:before {
+.cherry-markdown.theme__essay .toc .toc-li .level-3:before {
   counter-increment: toc-level-3;
   content: counter(toc-level-2)"."counter(toc-level-3)"\00A0";
   //content: counter(toc-level-1)"."counter(toc-level-2)"."counter(toc-level-3)"\00A0";
 }
 
-.cherry-markdown.theme__new_1 .toc .toc-li .level-4:before {
+.cherry-markdown.theme__essay .toc .toc-li .level-4:before {
   counter-increment: toc-level-4;
   content: counter(toc-level-2)"."counter(toc-level-3)"."counter(toc-level-4)"\00A0";
   //content: counter(toc-level-1)"."counter(toc-level-2)"."counter(toc-level-3)"."counter(toc-level-4)" ";

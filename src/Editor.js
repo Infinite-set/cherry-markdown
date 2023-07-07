@@ -501,7 +501,7 @@ export default class Editor {
     }
     const $lineNum = Math.max(0, lineNum);
     this.jumpToLine($lineNum, endLine, percent);
-    Logger.log('滚动预览区域，啊啊啊左侧应scroll to ', $lineNum);
+    Logger.log('滚动预览区域，左侧应scroll to ', $lineNum);
   }
 
   /**

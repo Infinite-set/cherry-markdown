@@ -773,6 +773,4 @@ title 饼图
 [^专有语法提醒]: 该语法是**CherryMarkdown专有语法**，可能无法在其他markdown平台上使用该语法
 
 [^不通用提醒]: 该语法不是markdown通用语法，无法保证在其他markdown平台上进行正确渲染
-
-
 $$

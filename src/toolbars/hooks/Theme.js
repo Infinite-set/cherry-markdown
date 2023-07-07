@@ -41,12 +41,6 @@ export default class Theme extends MenuBase {
    * @returns {string} 回填到编辑器光标位置/选中文本区域的内容
    */
   onClick(selection, shortKey = '', codemirror) {
-    const currentTop = this.editor.editor.getScrollInfo().top;
-    const targetLine = this.editor.editor.lineAtHeight(currentTop, 'local');
-    console.log('不知道这个是什么', targetLine);
-    // scrollBy(0, -targetLine);
-    this.editor.previewer.scrollToLineNum(0);
-    this.editor.scrollToLineNum(0, 0, 1);
     changeTheme(this.$cherry, shortKey);
     this.updateMarkdown = false;
     return '';
